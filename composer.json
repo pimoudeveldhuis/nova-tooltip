@@ -1,5 +1,5 @@
 {
-    "name": "badinansoft/nova-tooltip",
+    "name": "pimoudeveldhuis/nova-tooltip",
     "description": "A Laravel Nova tool to give you ability to put tooltip in fields in every where and in menu item",
     "keywords": [
         "laravel",
@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Badinansoft\\Tooltip\\": "src/"
+            "PimOudeVeldhuis\\Tooltip\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Badinansoft\\Tooltip\\ToolTipServiceProvider"
+                "PimOudeVeldhuis\\Tooltip\\ToolTipServiceProvider"
             ]
         }
     },
