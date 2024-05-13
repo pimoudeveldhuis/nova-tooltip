@@ -8,28 +8,24 @@
           :class="{ 'mb-2': shouldShowHelpText }"
         >
 
-            {{ fieldLabel }}
-
-            <span v-if="field.required" class="text-red-500 text-sm">
-              {{ __('*') }}
+            <span v-if="tooltip===''">
+                {{ fieldLabel }}
+                <span v-if="field.required" class="text-red-500 text-sm">
+                    {{ __('*') }}
+                </span>
             </span>
 
+            <Tooltip :triggers="['click']" v-if="tooltip!==''" class="inline ml-4">
+                <strong class="cursor-pointer">{{ fieldLabel }}</strong>
 
-          <Tooltip :triggers="['click']" v-if="tooltip!==''" class="inline ml-4">
+                <span v-if="field.required" class="text-red-500 text-sm">
+                    {{ __('*') }}
+                </span>
 
-            <template v-slot:content >
-              <span v-html="tooltip"></span>
-            </template>
-
-            <Icon
-                :solid="true"
-                type="question-mark-circle"
-                class="cursor-pointer text-gray-400 dark:text-gray-500"
-            />
-
-          </Tooltip>
-
-
+                <template v-slot:content>
+                    <span v-html="tooltip"></span>
+                </template>
+            </Tooltip>
         </FormLabel>
       </slot>
     </div>

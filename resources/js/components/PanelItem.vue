@@ -6,22 +6,16 @@
     <div class="md:w-1/4 md:py-3">
       <slot>
         <h4 class="font-bold md:font-normal">
-          <span>{{ label }}
+          <span>
+            <span v-if="tooltip===''">{{ label }}</span>
 
-          <Tooltip :triggers="['click']" v-if="tooltip!==''" class="inline ml-4">
+            <Tooltip :triggers="['click']" v-if="tooltip!==''" class="inline ml-4">
+              <strong class="cursor-pointer">{{ label }}</strong>
 
-            <template v-slot:content >
-              <span v-html="tooltip"></span>
-            </template>
-
-            <Icon
-                :solid="true"
-                type="question-mark-circle"
-                class="cursor-pointer text-gray-400 dark:text-gray-500"
-            />
-
-          </Tooltip>
-
+              <template v-slot:content >
+                <span v-html="tooltip"></span>
+              </template>
+            </Tooltip>
           </span>
         </h4>
       </slot>
