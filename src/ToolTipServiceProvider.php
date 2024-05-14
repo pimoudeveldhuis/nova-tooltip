@@ -1,6 +1,6 @@
 <?php
 
-namespace Badinansoft\Tooltip;
+namespace PimOudeVeldhuis\Tooltip;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
