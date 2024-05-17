@@ -16,7 +16,7 @@
             </span>
 
             <Tooltip :triggers="['click']" v-if="tooltip!==''" class="inline ml-4">
-                <strong class="cursor-pointer">{{ fieldLabel }}</strong>
+                <span class="cursor-pointer">{{ fieldLabel }}</span>
 
                 <span v-if="field.required" class="text-red-500 text-sm">
                     {{ __('*') }}
