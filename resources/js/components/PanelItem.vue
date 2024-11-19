@@ -9,7 +9,7 @@
           <span>
             <span v-if="tooltip===''">{{ label }}</span>
 
-            <Tooltip :triggers="['click']" v-if="tooltip!==''" class="inline ml-4">
+            <Tooltip :triggers="['click']" v-if="tooltip!==''" class="inline">
               <span class="cursor-pointer">{{ label }}</span>
 
               <template v-slot:content >
